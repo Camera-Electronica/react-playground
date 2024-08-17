@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Camera-Electronica/react-playground/static/css/main.6f1dbf1a.css",
+    "main.js": "/Camera-Electronica/react-playground/static/js/main.50a654d0.js",
+    "static/js/453.1580f225.chunk.js": "/Camera-Electronica/react-playground/static/js/453.1580f225.chunk.js",
+    "static/media/logo.svg": "/Camera-Electronica/react-playground/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Camera-Electronica/react-playground/index.html",
+    "main.6f1dbf1a.css.map": "/Camera-Electronica/react-playground/static/css/main.6f1dbf1a.css.map",
+    "main.50a654d0.js.map": "/Camera-Electronica/react-playground/static/js/main.50a654d0.js.map",
+    "453.1580f225.chunk.js.map": "/Camera-Electronica/react-playground/static/js/453.1580f225.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f1dbf1a.css",
+    "static/js/main.50a654d0.js"
+  ]
+}
