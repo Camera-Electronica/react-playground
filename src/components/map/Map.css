@@ -1,0 +1,12 @@
+path {
+    cursor: pointer;
+  }
+  
+  path:hover {
+    fill: #ff0000;
+  }
+  
+  .selected {
+    fill: #ffcc00;
+  }
+  
