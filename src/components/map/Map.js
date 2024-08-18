@@ -29,7 +29,7 @@ const Map = () => {
           setSelectedState(d);
           // Filter counties based on selected state
           const counties = usCounties.features.filter(
-            county => county.properties.state === d.properties.name
+            county => county.properties.STATE_NAME === d.properties.NAME
           );
           renderCounties(counties, path, svg);
         });
@@ -55,8 +55,8 @@ const Map = () => {
       <div>
         <svg ref={svgRef} width="960" height="600"></svg>
         <div>
-          <h3>Selected State: {selectedState?.properties.name || 'None'}</h3>
-          <h3>Selected County: {selectedCounty?.properties.name || 'None'}</h3>
+          <h3>Selected State: {selectedState?.properties.NAME || 'None'}</h3>
+          <h3>Selected County: {selectedCounty?.properties.NAME || 'None'}</h3>
         </div>
       </div>
     );
