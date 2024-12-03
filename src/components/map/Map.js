@@ -85,8 +85,8 @@ const Map = () => {
     <div>
       <svg ref={svgRef} width="960" height="600"></svg>
       <div>
-        <h3>Selected State: {selectedState?.properties.NAME || 'None'}</h3>
-        <h3>Selected County: {selectedCounty?.properties.NAME || 'None'}</h3>
+        <p>Selected State: {selectedState?.properties.NAME || 'None'}</p>
+        <p>Selected County: {selectedCounty?.properties.NAME || 'None'}</p>
       </div>
     </div>
   );
