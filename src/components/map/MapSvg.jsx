@@ -2,15 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { geoPath, geoAlbersUsa } from 'd3-geo';
 
-const MapSvg = ({ usStates, usCounties, selectedState, setSelectedState, setSelectedCounty }) => {
+const MapSvg = ({ props, usStates, usCounties, selectedState, setSelectedState, setSelectedCounty }) => {
   const svgRef = useRef();
+  const width = props.width || 960;
+  const height = props.height || 600;
+  const scale = props.scale || 1000;
+  const projection = geoAlbersUsa().translate([width / 2, height / 2]).scale(scale);
+  const path = geoPath().projection(projection);
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
-    const width = 960;
-    const height = 600;
-    const projection = geoAlbersUsa().translate([width / 2, height / 2]).scale(1000);
-    const path = geoPath().projection(projection);
 
     // Render states
     svg.selectAll('.state').remove();
@@ -41,9 +42,9 @@ const MapSvg = ({ usStates, usCounties, selectedState, setSelectedState, setSele
         .attr('stroke', '#666')
         .on('click', (event, d) => setSelectedCounty(d));
     }
-  }, [usStates, usCounties, selectedState, setSelectedState, setSelectedCounty]);
+  }, [usStates, usCounties, selectedState, setSelectedState, setSelectedCounty, path]);
 
-  return <svg ref={svgRef} width="960" height="600"></svg>;
+  return <svg ref={svgRef} width={width} height={height} />;
 };
 
 export default MapSvg;

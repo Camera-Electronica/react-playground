@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import MapSvg from './mapSvg';
+import MapSvg from './MapSvg';
 import './Map.css';
 
-const Map = () => {
+const Map = (props) => {
   const [selectedState, setSelectedState] = useState(null);
   const [selectedCounty, setSelectedCounty] = useState(null);
   const [usStates, setUsStates] = useState(null);
@@ -18,7 +18,7 @@ const Map = () => {
 
   return (
     <div>
-      <MapSvg
+      <MapSvg props={props}
         usStates={usStates}
         usCounties={usCounties}
         selectedState={selectedState}
@@ -26,8 +26,8 @@ const Map = () => {
         setSelectedCounty={setSelectedCounty}
       />
       <div>
-        <h3>Selected State: {selectedState?.properties.NAME || 'None'}</h3>
-        <h3>Selected County: {selectedCounty?.properties.NAME || 'None'}</h3>
+        <p>Selected State: {selectedState?.properties.NAME || 'None'}</p>
+        <p>Selected County: {selectedCounty?.properties.NAME || 'None'}</p>
       </div>
     </div>
   );
