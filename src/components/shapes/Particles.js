@@ -20,7 +20,6 @@ function Particles(width = 100, height = 100, speed = 3, size = 10) {
       color += pos + " ";
     }
     color = "rgb(" + color + transparency;
-    console.log(color);
     return color;
   }
 
